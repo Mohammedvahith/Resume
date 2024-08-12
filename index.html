@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Vahith - Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        header a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #2980b9;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            border-bottom: 3px solid #3498db;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        section p,
+        section ul,
+        section li {
+            color: #2c3e50;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #3498db;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+
+        .experience-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(50% - 20px);
+            /* Responsive width */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .card .year {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .card p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+                /* Full width on small screens */
+            }
+        }
+
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(50% - 20px);
+            /* Responsive width */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .project-card p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex: 1 1 100%;
+                /* Full width on small screens */
+            }
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            flex: 1 1 calc(50% - 20px);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .card h3 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .card p strong {
+            color: #3498db;
+        }
+
+        .additional ul {
+            padding-left: 25px;
+        }
+
+        .additional ul li {
+            margin: 8px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #2980b9;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .education-header h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .education-header .year {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section p,
+            section ul,
+            section li {
+                font-size: 1em;
+            }
+
+            .card {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+
+            .footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Mohammed Vahith</h1>
+            <p>Email: <a href="mailto:vahith2004@gmail.com">vahith2004@gmail.com</a></p>
+            <p>Phone: +91 9384766138</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammed-vahith/"
+                    target="_blank">linkedin.com/in/mohammed-vahith/</a></p>
+        </header>
+
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>Currently pursuing a B.Tech student in Computer Science and Engineering (Honors) with a specialization in AI and
+                ML.
+                Proficient in Python, TensorFlow, Keras, SQL, and scikit-learn. Experienced in developing projects for
+                fraud detection, disease prediction, customer churn analysis, and emotion recognition. Eager to apply my
+                skills to innovative AI/ML solutions.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, HTML, CSS, JavaScript, SQL</li>
+                <li><strong>Frameworks & Libraries:</strong> TensorFlow, Keras, Bootstrap, jQuery, scikit-learn</li>
+                <li><strong>Databases:</strong> MongoDB, SQL</li>
+                <li><strong>Machine Learning & Deep Learning:</strong> CNN, RNN</li>
+                <li><strong>Data Visualization:</strong> Matplotlib, Tableau</li>
+                <li><strong>Data Manipulation:</strong> NumPy, Pandas</li>
+                <li><strong>Computer Vision:</strong> OpenCV</li>
+                <li><strong>Tools:</strong> Git, GitHub, Excel</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-container">
+                <div class="card">
+                    <h3>Machine Learning Intern - CodeAlpha</h3>
+                    <p class="year">2021 - Present</p>
+                    <p>Developed credit scoring models, emotion recognition systems from speech, handwritten character
+                        recognition, and disease prediction models. Gained extensive hands-on experience with advanced
+                        ML technologies and techniques.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Machine Learning Intern - CodSoft</h3>
+                    <p class="year">July 2024</p>
+                    <p>Worked on real-world projects such as movie genre classification and fraud detection. Enhanced
+                        skills in data analysis, model development, and Python programming. Acquired proficiency with
+                        industry-standard libraries and frameworks.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-header">
+                <h3>Bachelor of Technology in Computer Science and Engineering (Honors)</h3>
+                <h3 class="year">2021 - Present</h3>
+            </div>
+            <p><strong>Periyar Maniammai Institute of Science and Technology, Vallam, Thanjavur</strong></p>
+            <p>Specialization: Artificial Intelligence and Machine Learning. CGPA: 7.13</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Movie Genre Classification</h3>
+                    <p>Developed a machine learning model to classify movies into genres based on various features.
+                        Utilized Python, scikit-learn, and Pandas for data preprocessing and model training. Achieved an
+                        accuracy of [insert accuracy percentage].</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Designed a predictive model to identify customers likely to churn. Employed Python and
+                        scikit-learn to analyze customer data and forecast churn. Provided actionable insights to
+                        enhance customer retention strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="additional">
+            <h2>Additional Information</h2>
+            <ul>
+                <li>Crash Course on Python - Coursera</li>
+                <li>30 Days MasterClass on AI and FullStack - NoviTech</li>
+                <li>Active on coding platforms such as HackerRank and LeetCode</li>
+                <li><strong>Languages:</strong> English, Tamil</li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            <p>For more information, visit my <a href="https://www.linkedin.com/in/mohammed-vahith/"
+                    target="_blank">LinkedIn profile</a> or contact me via email.</p>
+        </div>
+    </div>
+</body>
+
+</html>
